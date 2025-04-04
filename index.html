@@ -1,1 +1,206 @@
-Hello World
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Advisor - Werther Maia</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define a fonte Inter como padrão */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #2d2d2d; /* Cor de fundo principal do cartão */
+            color: #ffffff; /* Cor do texto principal */
+        }
+        /* Estilo para os ícones dos serviços */
+        .service-icon {
+            width: 48px; /* Tamanho do ícone */
+            height: 48px; /* Tamanho do ícone */
+            stroke: #cccccc; /* Cor do contorno do ícone (prata/cinza claro) */
+            stroke-width: 1.5; /* Espessura do contorno */
+            fill: none; /* Sem preenchimento por padrão */
+            margin-bottom: 0.5rem; /* Espaçamento abaixo do ícone */
+        }
+        .service-icon-bg {
+            background-color: #4a4a4a; /* Fundo cinza escuro para o círculo do ícone */
+            border: 1px solid #6a6a6a; /* Borda sutil */
+            padding: 1rem; /* Espaçamento interno */
+            border-radius: 50%; /* Formato circular */
+            display: inline-flex; /* Para centralizar o ícone */
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem; /* Espaçamento abaixo do círculo */
+            width: 80px; /* Largura do círculo */
+            height: 80px; /* Altura do círculo */
+        }
+         /* Estilo para o ícone Bitcoin SVG */
+        .bitcoin-icon {
+            width: 48px;
+            height: 48px;
+            fill: #cccccc; /* Cor de preenchimento para o Bitcoin */
+            margin-bottom: 0.5rem;
+        }
+        /* Animação sutil para os cards de serviço */
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+        /* Linha divisória */
+        hr {
+            border-color: #4a4a4a; /* Cor da linha */
+        }
+        /* Estilo para links */
+        a {
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #a0a0a0; /* Cor do link ao passar o mouse */
+        }
+         /* Estilo para o elemento gráfico circular (simplificado) */
+        .tech-circle {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #cccccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem auto; /* Centraliza e adiciona margem */
+            position: relative; /* Para posicionamento interno se necessário */
+        }
+         /* Pontos no círculo (simulação) */
+        .tech-circle::before, .tech-circle::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #cccccc;
+            border-radius: 50%;
+        }
+        .tech-circle::before { top: 10px; left: 50%; transform: translateX(-50%); }
+        .tech-circle::after { bottom: 10px; left: 50%; transform: translateX(-50%); }
+        /* Adicione mais pontos se desejar */
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="py-6 text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">AI ADVISOR</h1>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <section class="text-center mb-16">
+             <div class="tech-circle mb-6">
+                 <div class="text-center">
+                     <h2 class="text-3xl font-semibold text-white">WERTHER</h2>
+                     <h2 class="text-3xl font-semibold text-white">MAIA</h2>
+                 </div>
+            </div>
+            <p class="mt-4 text-lg leading-8 text-gray-300 max-w-2xl mx-auto">
+                Consultoria especializada em Inteligência Artificial, Otimização de Fluxos de Trabalho, SaaS, Criptoativos e Ferramentas de Produtividade.
+            </p>
+        </section>
+
+        <hr class="my-12">
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-semibold text-center mb-10 text-white">Nossos Serviços</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+
+                <div class="bg-[#3a3a3a] p-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out service-card">
+                    <div class="flex justify-center mb-4">
+                         <div class="service-icon-bg">
+                            <i data-lucide="headset" class="service-icon"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">AI Agent Consulting</h4>
+                    <p class="text-gray-300 text-sm">Consultoria para implementação e otimização de agentes de IA.</p>
+                </div>
+
+                <div class="bg-[#3a3a3a] p-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out service-card">
+                    <div class="flex justify-center mb-4">
+                        <div class="service-icon-bg">
+                            <i data-lucide="workflow" class="service-icon"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Workflow Consulting</h4>
+                    <p class="text-gray-300 text-sm">Otimização de fluxos de trabalho com soluções inteligentes.</p>
+                </div>
+
+                <div class="bg-[#3a3a3a] p-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out service-card">
+                     <div class="flex justify-center mb-4">
+                        <div class="service-icon-bg">
+                            <i data-lucide="laptop" class="service-icon"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">SaaS Consulting</h4>
+                    <p class="text-gray-300 text-sm">Consultoria estratégica para produtos e serviços SaaS.</p>
+                </div>
+
+                <div class="bg-[#3a3a3a] p-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out service-card">
+                    <div class="flex justify-center mb-4">
+                        <div class="service-icon-bg">
+                            <svg class="bitcoin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M21.905 11.63c.46-.705-.015-1.63-1.04-1.63h-4.07c.485-1.68.57-3.445.5-5.125 0-.97-.895-1.4-1.54-.835l-2.695 2.37c-.89.785-.83 2.145.115 2.855.94.71 2.205.61 3.05-.21.295-.28.125-.785-.255-.85-.79-.135-.94-.9-.19-1.185.75-.285 1.54-.1 1.825.62.285.715.015 1.63-1.04 1.63h-3.17c-.93 0-1.7.77-1.7 1.7v5.4c0 .93.77 1.7 1.7 1.7h3.17c1.055 0 1.525.925 1.04 1.63-.75.285-1.54.1-1.825-.62-.285-.715-.015-1.63 1.04-1.63h4.07c1.025 0 1.5-.925 1.04-1.63.485 1.68.57 3.445.5 5.125 0 .97.895 1.4 1.54.835l2.695-2.37c.89-.785.83-2.145-.115-2.855-.94-.71-2.205-.61-3.05.21-.295.28-.125-.785.255.85.79.135.94.9.19 1.185-.75.285-1.54.1-1.825-.62zm-8.18-5.445c-.01-.015-.025-.025-.03-.04-.19-.285-.045-.68.31-.82.35-.145.75-.03.94.255.19.285.045.68-.31.82-.35.145-.755.035-.91-.215zm1.7 13.61c.01.015.025.025.03.04.19.285.045.68-.31.82-.35.145-.75.03-.94-.255-.19-.285-.045-.68.31-.82.35-.145.755-.035.91.215z"/>
+                                <path d="M10.725 11h-1.7c-.93 0-1.7.77-1.7 1.7v5.4c0 .93.77 1.7 1.7 1.7h1.7c.93 0 1.7-.77 1.7-1.7v-5.4c0-.93-.77-1.7-1.7-1.7zm.7 7.1c0 .385-.315.7-.7.7h-1.7c-.385 0-.7-.315-.7-.7v-5.4c0-.385.315-.7.7-.7h1.7c.385 0 .7.315.7.7v5.4z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Crypto Consulting</h4>
+                    <p class="text-gray-300 text-sm">Consultoria especializada no mercado de criptoativos.</p>
+                </div>
+
+                <div class="bg-[#3a3a3a] p-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out service-card">
+                     <div class="flex justify-center mb-4">
+                        <div class="service-icon-bg">
+                           <i data-lucide="check-square" class="service-icon"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Productivity Tools</h4>
+                    <p class="text-gray-300 text-sm">Indicação e implementação de ferramentas para aumentar a produtividade.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="my-12">
+
+        <section class="text-center">
+            <h3 class="text-3xl font-semibold mb-6 text-white">Entre em Contato</h3>
+            <p class="text-lg text-gray-300 mb-4">
+                Visite nosso site ou ligue para saber mais.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                <a href="http://WMADVISOR.AI" target="_blank" rel="noopener noreferrer" class="text-xl text-white hover:text-gray-400 flex items-center">
+                    <i data-lucide="globe" class="w-5 h-5 mr-2"></i>
+                    WMADVISOR.AI
+                </a>
+                <a href="tel:+5511975815539" class="text-xl text-white hover:text-gray-400 flex items-center">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                    (11) 97581-5539
+                </a>
+            </div>
+             </section>
+
+    </main>
+
+    <footer class="mt-16 py-6 border-t border-gray-700">
+        <p class="text-center text-gray-400 text-sm">
+            &copy; <span id="currentYear"></span> AI Advisor - Werther Maia. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Define o ano atual no rodapé
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
